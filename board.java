@@ -16,14 +16,14 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 
 public class Board extends JPanel implements ActionListener {
-
+    // define the constants used in the game
     private final int B_WIDTH = 300;
     private final int B_HEIGHT = 300;
     private final int DOT_SIZE = 10;
     private final int ALL_DOTS = 900;
     private final int RAND_POS = 29;
     private final int DELAY = 140;
-
+    //x and y coordinates of all the joints of snake
     private final int x[] = new int[ALL_DOTS];
     private final int y[] = new int[ALL_DOTS];
 
@@ -57,7 +57,7 @@ public class Board extends JPanel implements ActionListener {
         loadImages();
         initGame();
     }
-
+    // get images for the game
     private void loadImages() {
 
         ImageIcon iid = new ImageIcon("src/resources/dot.png");
@@ -69,7 +69,7 @@ public class Board extends JPanel implements ActionListener {
         ImageIcon iih = new ImageIcon("src/resources/head.png");
         head = iih.getImage();
     }
-
+    // create snake, load apple & start timer
     private void initGame() {
 
         dots = 3;
